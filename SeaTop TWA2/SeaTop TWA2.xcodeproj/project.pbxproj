@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA81D27A1A6C8F70005EBED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81D2791A6C8F70005EBED7 /* AppDelegate.swift */; };
+		CA81D27C1A6C8F70005EBED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81D27B1A6C8F70005EBED7 /* ViewController.swift */; };
+		CA81D27F1A6C8F70005EBED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA81D27D1A6C8F70005EBED7 /* Main.storyboard */; };
+		CA81D2811A6C8F70005EBED7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA81D2801A6C8F70005EBED7 /* Images.xcassets */; };
+		CA81D2841A6C8F70005EBED7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA81D2821A6C8F70005EBED7 /* LaunchScreen.xib */; };
+		CA81D2901A6C8F70005EBED7 /* SeaTop_TWA2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81D28F1A6C8F70005EBED7 /* SeaTop_TWA2Tests.swift */; };
+		CA81D29A1A6C9DF1005EBED7 /* SeaTopCalcTWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81D2991A6C9DF1005EBED7 /* SeaTopCalcTWA.swift */; };
+		CA81D29C1A6CA691005EBED7 /* SeaTopCalcCompass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81D29B1A6CA691005EBED7 /* SeaTopCalcCompass.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA81D28A1A6C8F70005EBED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA81D26C1A6C8F70005EBED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA81D2731A6C8F70005EBED7;
+			remoteInfo = "SeaTop TWA2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA81D2741A6C8F70005EBED7 /* SeaTop TWA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeaTop TWA2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA81D2781A6C8F70005EBED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA81D2791A6C8F70005EBED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA81D27B1A6C8F70005EBED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA81D27E1A6C8F70005EBED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA81D2801A6C8F70005EBED7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA81D2831A6C8F70005EBED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CA81D2891A6C8F70005EBED7 /* SeaTop TWA2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SeaTop TWA2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA81D28E1A6C8F70005EBED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA81D28F1A6C8F70005EBED7 /* SeaTop_TWA2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaTop_TWA2Tests.swift; sourceTree = "<group>"; };
+		CA81D2991A6C9DF1005EBED7 /* SeaTopCalcTWA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeaTopCalcTWA.swift; path = ../SeaTopCalcTWA.swift; sourceTree = "<group>"; };
+		CA81D29B1A6CA691005EBED7 /* SeaTopCalcCompass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaTopCalcCompass.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA81D2711A6C8F70005EBED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA81D2861A6C8F70005EBED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA81D26B1A6C8F70005EBED7 = {
+			isa = PBXGroup;
+			children = (
+				CA81D2761A6C8F70005EBED7 /* SeaTop TWA2 */,
+				CA81D28C1A6C8F70005EBED7 /* SeaTop TWA2Tests */,
+				CA81D2751A6C8F70005EBED7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA81D2751A6C8F70005EBED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA81D2741A6C8F70005EBED7 /* SeaTop TWA2.app */,
+				CA81D2891A6C8F70005EBED7 /* SeaTop TWA2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA81D2761A6C8F70005EBED7 /* SeaTop TWA2 */ = {
+			isa = PBXGroup;
+			children = (
+				CA81D2991A6C9DF1005EBED7 /* SeaTopCalcTWA.swift */,
+				CA81D29B1A6CA691005EBED7 /* SeaTopCalcCompass.swift */,
+				CA81D2791A6C8F70005EBED7 /* AppDelegate.swift */,
+				CA81D27B1A6C8F70005EBED7 /* ViewController.swift */,
+				CA81D27D1A6C8F70005EBED7 /* Main.storyboard */,
+				CA81D2801A6C8F70005EBED7 /* Images.xcassets */,
+				CA81D2821A6C8F70005EBED7 /* LaunchScreen.xib */,
+				CA81D2771A6C8F70005EBED7 /* Supporting Files */,
+			);
+			path = "SeaTop TWA2";
+			sourceTree = "<group>";
+		};
+		CA81D2771A6C8F70005EBED7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA81D2781A6C8F70005EBED7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA81D28C1A6C8F70005EBED7 /* SeaTop TWA2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CA81D28F1A6C8F70005EBED7 /* SeaTop_TWA2Tests.swift */,
+				CA81D28D1A6C8F70005EBED7 /* Supporting Files */,
+			);
+			path = "SeaTop TWA2Tests";
+			sourceTree = "<group>";
+		};
+		CA81D28D1A6C8F70005EBED7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA81D28E1A6C8F70005EBED7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA81D2731A6C8F70005EBED7 /* SeaTop TWA2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA81D2931A6C8F70005EBED7 /* Build configuration list for PBXNativeTarget "SeaTop TWA2" */;
+			buildPhases = (
+				CA81D2701A6C8F70005EBED7 /* Sources */,
+				CA81D2711A6C8F70005EBED7 /* Frameworks */,
+				CA81D2721A6C8F70005EBED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SeaTop TWA2";
+			productName = "SeaTop TWA2";
+			productReference = CA81D2741A6C8F70005EBED7 /* SeaTop TWA2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA81D2881A6C8F70005EBED7 /* SeaTop TWA2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA81D2961A6C8F70005EBED7 /* Build configuration list for PBXNativeTarget "SeaTop TWA2Tests" */;
+			buildPhases = (
+				CA81D2851A6C8F70005EBED7 /* Sources */,
+				CA81D2861A6C8F70005EBED7 /* Frameworks */,
+				CA81D2871A6C8F70005EBED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA81D28B1A6C8F70005EBED7 /* PBXTargetDependency */,
+			);
+			name = "SeaTop TWA2Tests";
+			productName = "SeaTop TWA2Tests";
+			productReference = CA81D2891A6C8F70005EBED7 /* SeaTop TWA2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA81D26C1A6C8F70005EBED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Nathaniel Brockman";
+				TargetAttributes = {
+					CA81D2731A6C8F70005EBED7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 34S3VJRLB4;
+					};
+					CA81D2881A6C8F70005EBED7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CA81D2731A6C8F70005EBED7;
+					};
+				};
+			};
+			buildConfigurationList = CA81D26F1A6C8F70005EBED7 /* Build configuration list for PBXProject "SeaTop TWA2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA81D26B1A6C8F70005EBED7;
+			productRefGroup = CA81D2751A6C8F70005EBED7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA81D2731A6C8F70005EBED7 /* SeaTop TWA2 */,
+				CA81D2881A6C8F70005EBED7 /* SeaTop TWA2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA81D2721A6C8F70005EBED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81D27F1A6C8F70005EBED7 /* Main.storyboard in Resources */,
+				CA81D2841A6C8F70005EBED7 /* LaunchScreen.xib in Resources */,
+				CA81D2811A6C8F70005EBED7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA81D2871A6C8F70005EBED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA81D2701A6C8F70005EBED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81D27C1A6C8F70005EBED7 /* ViewController.swift in Sources */,
+				CA81D29A1A6C9DF1005EBED7 /* SeaTopCalcTWA.swift in Sources */,
+				CA81D27A1A6C8F70005EBED7 /* AppDelegate.swift in Sources */,
+				CA81D29C1A6CA691005EBED7 /* SeaTopCalcCompass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA81D2851A6C8F70005EBED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA81D2901A6C8F70005EBED7 /* SeaTop_TWA2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA81D28B1A6C8F70005EBED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA81D2731A6C8F70005EBED7 /* SeaTop TWA2 */;
+			targetProxy = CA81D28A1A6C8F70005EBED7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA81D27D1A6C8F70005EBED7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA81D27E1A6C8F70005EBED7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA81D2821A6C8F70005EBED7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA81D2831A6C8F70005EBED7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA81D2911A6C8F70005EBED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA81D2921A6C8F70005EBED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA81D2941A6C8F70005EBED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SeaTop TWA2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		CA81D2951A6C8F70005EBED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SeaTop TWA2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		CA81D2971A6C8F70005EBED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SeaTop TWA2Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeaTop TWA2.app/SeaTop TWA2";
+			};
+			name = Debug;
+		};
+		CA81D2981A6C8F70005EBED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SeaTop TWA2Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeaTop TWA2.app/SeaTop TWA2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA81D26F1A6C8F70005EBED7 /* Build configuration list for PBXProject "SeaTop TWA2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA81D2911A6C8F70005EBED7 /* Debug */,
+				CA81D2921A6C8F70005EBED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA81D2931A6C8F70005EBED7 /* Build configuration list for PBXNativeTarget "SeaTop TWA2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA81D2941A6C8F70005EBED7 /* Debug */,
+				CA81D2951A6C8F70005EBED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA81D2961A6C8F70005EBED7 /* Build configuration list for PBXNativeTarget "SeaTop TWA2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA81D2971A6C8F70005EBED7 /* Debug */,
+				CA81D2981A6C8F70005EBED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA81D26C1A6C8F70005EBED7 /* Project object */;
+}
