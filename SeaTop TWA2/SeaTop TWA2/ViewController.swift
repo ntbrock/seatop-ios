@@ -46,14 +46,14 @@ class ViewController: UIViewController {
     
     func twdLabel() {
         let twd = Int(twdSlider.value)
-        twdM.text = NSString(format: "%03d", twd )
-        twdCompass.text = NSString( UTF8String: SeaTopCalcCompass.compass(twd) )
+        twdM.text = String(format: "%03d", twd )
+        twdCompass.text = String( UTF8String: SeaTopCalcCompass.compass(twd) )
     }
 
     func hdgLabel() {
         let hdg = Int(hdgSlider.value)
-        hdgM.text = NSString(format: "%03d", hdg )
-        hdgCompass.text = NSString( UTF8String: SeaTopCalcCompass.compass(hdg) )
+        hdgM.text = String(format: "%03d", hdg )
+        hdgCompass.text = String( UTF8String: SeaTopCalcCompass.compass(hdg) )
     
     }
     
@@ -76,14 +76,14 @@ class ViewController: UIViewController {
     
     @IBAction func onTwdPlus(sender: AnyObject) {
         
-        let button = sender as UIButton
+        let button = sender as! UIButton
         twdSlider.value += 1
         onTwdChange(sender)
     }
     
     @IBAction func onTwdMinus(sender: AnyObject) {
         
-        let button = sender as UIButton
+        let button = sender as! UIButton
         twdSlider.value -= 1
         onTwdChange(sender)
     }
@@ -91,14 +91,14 @@ class ViewController: UIViewController {
     
     @IBAction func onHdgPlus(sender: AnyObject) {
         
-        let button = sender as UIButton
+        let button = sender as! UIButton
         hdgSlider.value += 1
         onHdgChange(sender)
     }
     
     @IBAction func onHdgMinus(sender: AnyObject) {
         
-        let button = sender as UIButton
+        let button = sender as! UIButton
         hdgSlider.value -= 1
         onHdgChange(sender)
     }
@@ -118,19 +118,19 @@ class ViewController: UIViewController {
             twaStbd2.alpha = 1
             twaPort.alpha = 0.1
             twaPort2.alpha = 0.1
-            twaM.text = NSString( format: "%d", twaR )
+            twaM.text = String( format: "%d", twaR )
         } else if ( twaR < 0 ) {
             twaStbd.alpha = 0.1
             twaStbd2.alpha = 0.1
             twaPort.alpha = 1
             twaPort2.alpha = 1
-            twaM.text = NSString( format: "%d", twaR * -1 )
+            twaM.text = String( format: "%d", twaR * -1 )
         } else {
             twaStbd.alpha = 1
             twaStbd2.alpha = 1
             twaPort.alpha = 1
             twaPort2.alpha = 1
-            twaM.text = NSString( format: "%d", twaR )
+            twaM.text = String( format: "%d", twaR )
         }
         
         
