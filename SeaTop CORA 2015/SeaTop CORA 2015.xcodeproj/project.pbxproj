@@ -162,6 +162,7 @@
 		CA5B67FD1A754BDA00176A45 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Nathaniel Brockman";
 				TargetAttributes = {
@@ -413,6 +414,7 @@
 				CA5B68261A754BDB00176A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA5B68271A754BDB00176A45 /* Build configuration list for PBXNativeTarget "SeaTop CORA 2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +423,7 @@
 				CA5B68291A754BDB00176A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
