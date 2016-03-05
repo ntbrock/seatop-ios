@@ -3,7 +3,7 @@
 //  SeaTop CORA 2016
 //
 //  Created by Nathaniel Brockman on 1/25/15.
-//  Reviewed 2015Mar05
+//  Reviewed 2016Mar05 and Courses UPdated
 //  Copyright (c) 2016 Nathaniel Brockman. All rights reserved.
 //
 
