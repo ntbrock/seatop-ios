@@ -101,7 +101,7 @@ class CourseTableViewCell : UITableViewCell {
     }
     
     
-    func loadItem(#course: CoraCourse) {
+    func loadItem(course: CoraCourse) {
         blankLabels()
         
         titleLabel.text = course.title
@@ -231,10 +231,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
         */
     
-        var cell:CourseTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as CourseTableViewCell
+        var cell:CourseTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! CourseTableViewCell
         
         // this is how you extract values from a tuple
-        cell.loadItem(course: items[indexPath.row])
+        cell.loadItem(items[indexPath.row])
         
         return cell
         
@@ -243,7 +243,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-         println("You selected cell #\(indexPath.row)!")
+         print("You selected cell #\(indexPath.row)!")
     }
 }
 

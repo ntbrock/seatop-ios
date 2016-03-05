@@ -47,7 +47,7 @@ struct CoraCourse {
     let title: String
     let distanceNm: Double
     let category: String  // Offshore, Harbor
-    let marks:[CoraRounding] = []
+    let marks:[CoraRounding]
 }
 
 
