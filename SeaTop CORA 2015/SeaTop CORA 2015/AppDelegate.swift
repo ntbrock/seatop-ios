@@ -1,9 +1,10 @@
 //
 //  AppDelegate.swift
-//  SeaTop CORA 2015
+//  SeaTop CORA 2016
 //
 //  Created by Nathaniel Brockman on 1/25/15.
-//  Copyright (c) 2015 Nathaniel Brockman. All rights reserved.
+//  Reviewed 2015Mar05
+//  Copyright (c) 2016 Nathaniel Brockman. All rights reserved.
 //
 
 import UIKit
