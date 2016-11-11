@@ -11,8 +11,8 @@ import Foundation
 struct SeaTopCalcTWA
 {
     
-    static func twa_(twd: Int, hdg: Int) -> (Int, Int, String) {
-        var wa = twd - hdg
+    static func twa_(_ twd: Int, hdg: Int) -> (Int, Int, String) {
+        let wa = twd - hdg
         var twa = 0
         var twas = 0
         var portStbd = ""
@@ -52,7 +52,7 @@ struct SeaTopCalcTWA
     * First element is an aolwqways positive window angle,
     * 2nd element is || for Astern,  -- for Ahead,  -| for Port  |- for Stbd
     */
-    static func twa_r(twd: Int, hdg: Int) -> Int {
+    static func twa_r(_ twd: Int, hdg: Int) -> Int {
         return twa_(twd, hdg: hdg).0
     }
     
@@ -61,9 +61,9 @@ struct SeaTopCalcTWA
     * True wind angle, integer signed.  + is STBD, - is PORT
     */
     
-    static func twa_s(twd: Int, hdg: Int) -> (Int, String) {
+    static func twa_s(_ twd: Int, hdg: Int) -> (Int, String) {
         
-        var parts = twa_(twd, hdg: hdg)
+        let parts = twa_(twd, hdg: hdg)
         return (parts.1, parts.2)
     }
     

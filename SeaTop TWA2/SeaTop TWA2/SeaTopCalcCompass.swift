@@ -74,7 +74,7 @@ struct SeaTopCalcCompass
     
     
     // Integer based static lookup routine = fastest.
-    static func compass(brg: Int) -> String {
+    static func compass(_ brg: Int) -> String {
         if ( brg < 0 || brg > 360 ) { return "ERR" }
         return lbl[brg]
     }

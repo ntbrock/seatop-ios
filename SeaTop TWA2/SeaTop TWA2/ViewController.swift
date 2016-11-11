@@ -47,17 +47,17 @@ class ViewController: UIViewController {
     func twdLabel() {
         let twd = Int(twdSlider.value)
         twdM.text = String(format: "%03d", twd )
-        twdCompass.text = String( UTF8String: SeaTopCalcCompass.compass(twd) )
+        twdCompass.text = String( validatingUTF8: SeaTopCalcCompass.compass(twd) )
     }
 
     func hdgLabel() {
         let hdg = Int(hdgSlider.value)
         hdgM.text = String(format: "%03d", hdg )
-        hdgCompass.text = String( UTF8String: SeaTopCalcCompass.compass(hdg) )
+        hdgCompass.text = String( validatingUTF8: SeaTopCalcCompass.compass(hdg) )
     
     }
     
-    @IBAction func onTwdChange(sender: AnyObject) {
+    @IBAction func onTwdChange(_ sender: AnyObject) {
 
 //        let slider = sender as UISlider
 //        let twd = Int(slider.value)
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func onHdgChange(sender: AnyObject) {
+    @IBAction func onHdgChange(_ sender: AnyObject) {
         hdgLabel()
         onRecalc()
     }
@@ -74,14 +74,14 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func onTwdPlus(sender: AnyObject) {
+    @IBAction func onTwdPlus(_ sender: AnyObject) {
         
         let button = sender as! UIButton
         twdSlider.value += 1
         onTwdChange(sender)
     }
     
-    @IBAction func onTwdMinus(sender: AnyObject) {
+    @IBAction func onTwdMinus(_ sender: AnyObject) {
         
         let button = sender as! UIButton
         twdSlider.value -= 1
@@ -89,14 +89,14 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func onHdgPlus(sender: AnyObject) {
+    @IBAction func onHdgPlus(_ sender: AnyObject) {
         
         let button = sender as! UIButton
         hdgSlider.value += 1
         onHdgChange(sender)
     }
     
-    @IBAction func onHdgMinus(sender: AnyObject) {
+    @IBAction func onHdgMinus(_ sender: AnyObject) {
         
         let button = sender as! UIButton
         hdgSlider.value -= 1
