@@ -16,9 +16,6 @@ import Foundation
 
 import UIKit
 
-
-var schedule = []
-
 // Check in - VHF 74
 // Announcements - VHF 73
 
@@ -213,7 +210,7 @@ struct CoraCourses2017 {
     */
     CoraCourse( title: "Course 3 - WL Downwind", distanceNm: 3.1, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.stbd,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
         ] ),
     
@@ -251,11 +248,11 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.stbd,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
         ] ),
     
-BOOK- RESUME HERE
+// BOOK- RESUME HERE
 
     /*
     COURSE 6 – 2.1 NM

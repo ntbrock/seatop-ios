@@ -101,7 +101,7 @@ class CourseTableViewCell : UITableViewCell {
     }
     
     
-    func loadItem(course: CoraCourse) {
+    func loadItem(_ course: CoraCourse) {
         blankLabels()
         
         titleLabel.text = course.title
@@ -193,7 +193,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
  
     //var items: [String] = ["We", "Heart", "Swift"]
-    var items: [CoraCourse] = CoraCourses2015.courses
+    var items: [CoraCourse] = CoraCourses2017.courses
     
     
     @IBOutlet
@@ -205,9 +205,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        var nib = UINib(nibName: "CourseTableViewCell", bundle: nil)
+        let nib = UINib(nibName: "CourseTableViewCell", bundle: nil)
         
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "cell")
+        self.tableView.register(nib, forCellReuseIdentifier: "cell")
         
         
     }
@@ -217,11 +217,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         /*
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
@@ -231,7 +231,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
         */
     
-        var cell:CourseTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! CourseTableViewCell
+        let cell:CourseTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as! CourseTableViewCell
         
         // this is how you extract values from a tuple
         cell.loadItem(items[indexPath.row])
@@ -241,7 +241,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
          print("You selected cell #\(indexPath.row)!")
     }
