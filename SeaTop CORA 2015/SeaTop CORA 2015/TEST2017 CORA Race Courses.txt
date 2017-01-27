@@ -1,0 +1,39 @@
+2017 CORA Race Courses
+HARBOR COURSES
+
+Course numbers have changed from previous years
+
+ALPHA COURSE – LENGTH TO BE DETERMINED
+The START, MARKS, and FINISH will be designated by the Race
+Committee and communicated over the radio on Channel 73.
+
+
+
+
+
+
+TEST
+
+
+- Test Course Names + Nicknames
+
+- Courses (As programmed) make sense - the marks all connect (unit test)
+
+- Distances
+
+- Rounding boards - port STBD
+
+
+
+
+
+//  Unit Test 1- Make sure that the start leg == the mark
+
+//  Unit Test 2 - make sure next mark == finish of the leg.
+
+// Unit Test 3 - Do Leg distances add up to the course distance?
+
+// Unit Test 4 - Make sure that the reciprocal legs are actually reciprocal.
+
+
+

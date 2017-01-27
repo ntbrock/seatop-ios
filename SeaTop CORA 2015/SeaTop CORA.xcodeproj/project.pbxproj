@@ -63,8 +63,8 @@
 		CA5B67FC1A754BDA00176A45 = {
 			isa = PBXGroup;
 			children = (
-				CA5B68071A754BDA00176A45 /* SeaTop CORA 2015 */,
-				CA5B681D1A754BDB00176A45 /* SeaTop CORA 2015Tests */,
+				CA5B68071A754BDA00176A45 /* SeaTop CORA 2017 */,
+				CA5B681D1A754BDB00176A45 /* SeaTop CORA 2017Tests */,
 				CA5B68061A754BDA00176A45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,7 +78,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA5B68071A754BDA00176A45 /* SeaTop CORA 2015 */ = {
+		CA5B68071A754BDA00176A45 /* SeaTop CORA 2017 */ = {
 			isa = PBXGroup;
 			children = (
 				CA5B680A1A754BDA00176A45 /* AppDelegate.swift */,
@@ -90,6 +90,7 @@
 				CA5B682A1A754F0300176A45 /* SeaTopCoraCourses.swift */,
 				CA5B682E1A75518300176A45 /* CourseTableViewCell.xib */,
 			);
+			name = "SeaTop CORA 2017";
 			path = "SeaTop CORA 2015";
 			sourceTree = "<group>";
 		};
@@ -101,12 +102,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CA5B681D1A754BDB00176A45 /* SeaTop CORA 2015Tests */ = {
+		CA5B681D1A754BDB00176A45 /* SeaTop CORA 2017Tests */ = {
 			isa = PBXGroup;
 			children = (
 				CA5B68201A754BDB00176A45 /* SeaTop_CORA_2015Tests.swift */,
 				CA5B681E1A754BDB00176A45 /* Supporting Files */,
 			);
+			name = "SeaTop CORA 2017Tests";
 			path = "SeaTop CORA 2015Tests";
 			sourceTree = "<group>";
 		};
@@ -305,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -344,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

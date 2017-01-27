@@ -137,6 +137,7 @@ struct CoraLeg {
     static let R2_TO_FINISH = CoraLeg ( begin: CoraMark.R2   , end: CoraMark.FINISH, headingToNextM: 304, distanceToNextNm: 2.3 )
     
     static let R4_TO_R2     = CoraLeg ( begin: CoraMark.R4   , end: CoraMark.R2    , headingToNextM: 107, distanceToNextNm: 1.74 )
+    static let R4_TO_G27    = CoraLeg ( begin: CoraMark.R4   , end: CoraMark.G27   , headingToNextM: 080, distanceToNextNm: 1.47 )
     static let R4_TO_G37    = CoraLeg ( begin: CoraMark.R4   , end: CoraMark.G37   , headingToNextM: 004, distanceToNextNm: 1.79 )
     static let R4_TO_FINISH = CoraLeg ( begin: CoraMark.R4   , end: CoraMark.FINISH, headingToNextM: 345, distanceToNextNm: 0.78 )
     
@@ -174,13 +175,13 @@ struct CoraCourses2017 {
     R “4” Fl R 4s STARBOARD
     FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 1 - Summer", distanceNm: 5.05, category: "Harbor", marks:[
+    CoraCourse( title: "Course 1 - Summer (Classic)", distanceNm: 5.05, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
         CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     
     /*
@@ -192,27 +193,25 @@ struct CoraCourses2017 {
     FINISH Finishing mark and CYC dock
     */
     
-    CoraCourse( title: "Course 2 - WL", distanceNm: 3.4, category: "Harbor", marks:[
+    CoraCourse( title: "Course 2 - BP&J 1x", distanceNm: 3.40, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
         CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     /*
-    CHANGED IN 2017
-
     COURSE 3 – 1.35 NM
     START Starting mark and CYC dock
     R “4” Fl R 4s STARBOARD
     FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 3 - WL Downwind", distanceNm: 3.1, category: "Harbor", marks:[
+    CoraCourse( title: "Course 3 - SeabreeZero", distanceNm: 1.35, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     /*
     COURSE 4 - 4.58 NM
@@ -222,17 +221,15 @@ struct CoraCourses2017 {
     R “4” Fl R 4s STARBOARD
     FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 4 - Middle Ground", distanceNm: 4.58, category: "Harbor", marks:[
+    CoraCourse( title: "Course 4 - Middle Ground 1x", distanceNm: 4.58, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     /*
-    CHANGE in 2017
-
     COURSE 5 – 7.83 NM
     START Starting mark and CYC dock
     RG "BP" Fl (2+1) R 6s PORT
@@ -242,7 +239,7 @@ struct CoraCourses2017 {
     R “4” Fl R 4s STARBOARD
     FINISH Finishing mark and CYC dock 
     */
-    CoraCourse( title: "Course 5 - Middle Ground Twice Acount", distanceNm: 7.83, category: "Harbor", marks:[
+    CoraCourse( title: "Course 5 - Middle Ground 2x", distanceNm: 7.83, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
@@ -250,424 +247,403 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-// BOOK- RESUME HERE
+    ] ),
 
     /*
-    COURSE 6 – 2.1 NM
-    START Starting mark and CYC dock “J” PORT
+    COURSE 6 – 11.08 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    G “27” Fl G 2.5s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    G “27” Fl G 2.5s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    G “27” Fl G 2.5s PORT
     R “4” Fl R 4s STARBOARD
     FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 6 - Shortie", distanceNm: 2.1, category: "Harbor", marks:[
+    CoraCourse( title: "Course 6 - Middle Ground 3x", distanceNm: 11.08, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
+        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
+        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
+        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+    COURSE 7 – 8.67 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    R "2" Fl R 2.5s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    R "2" Fl R 2.5s PORT
+    R “4” Fl R 4s STARBOARD
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 7 - Summer 2x", distanceNm: 8.67, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+    COURSE 8 – 12.29 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    R "2" Fl R 2.5s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    R "2" Fl R 2.5s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    R "2" Fl R 2.5s PORT
+    R “4” Fl R 4s STARBOARD
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 8 - Summer 3x", distanceNm: 12.29, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+    COURSE 9 – 5.50 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    “J” PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    “J” PORT
+    R "4" Fl R 4s STARBOARD
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 9 - BP&J 2x", distanceNm: 5.50, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J),
+        CoraRounding( mark: CoraMark.J,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J),
+        CoraRounding( mark: CoraMark.J,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+
+    /*
+    COURSE 10 - 7.60 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    “J” PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    “J” PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    “J” PORT
+    R "4" Fl R 4s STARBOARD
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 10 - BP&J 3x", distanceNm: 7.60, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J),
+        CoraRounding( mark: CoraMark.J,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J),
+        CoraRounding( mark: CoraMark.J,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J),
+        CoraRounding( mark: CoraMark.J,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    
+    /*
+    COURSE 11 – 5.30 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    G “37” FI G 4s PORT
+    R "4" Fl R 4s STARBOARD
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 11 - Ravenel 1x", distanceNm: 5.30, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+    COURSE 12 – 5.68 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    G “37” FI G 4s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 12 - RavenelBP 1x", distanceNm: 5.68, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+
+    /*
+    My opinion of race committe duty :
+    Time Management, Delegation, and Prepation influence the outcome of the race for all competitors.
+    */
+
+
+    /*
+    COURSE 13 – 9.31 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    G “37” FI G 4s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    G “37” FI G 4s PORT
+    R "4" Fl R 4s STARBOARD
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 13 - Ravenel 2x", distanceNm: 9.31, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+    COURSE 14 – 9.69 NM
+    START Starting mark and CYC dock
+    RG "BP" Fl (2+1) R 6s PORT
+    G “37” FI G 4s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    G “37” FI G 4s PORT
+    RG "BP" Fl (2+1) R 6s PORT
+    FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 14 - RavenelBP 2x", distanceNm: 9.69, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+        COURSE 15 – 7.41 NM
+        START Starting mark and CYC dock
+        RG "BP" Fl (2+1) R 6s PORT
+        G “37” FI G 4s PORT
+        RG "BP" Fl (2+1) R 6s PORT
+        “J” PORT
+        R "4" Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 15 - Ravenel then J", distanceNm: 7.41, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.J,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+        COURSE 16 - 4.47 NM
+        (NOT FOR “A” CLASS)
+        START Starting mark and CYC dock
+        R “2” Fl R 2.5s PORT
+        FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 16 - Not for A Class", distanceNm: 4.47, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+    
+    /*
+        COURSE 17 - 4.81 NM
+        (“A/D” CLASS COMPANION TO COURSE 16 )
+        START Starting mark and CYC dock
+        R “4” Fl R 4s PORT
+        R “2” Fl R 2.5s PORT
+        R “4” Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 17 - A&D companion to 16", distanceNm: 4.81, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     /*
-    COURSE 7 – 7.9 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G “27” Fl G 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    G “27” Fl G 2.5s PORT
-    R “4” Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 18 – 4.25 NM
+        START Starting mark and CYC dock
+        R "4" Fl R 4s PORT
+        G “27” Fl G 2.5s PORT
+        R “4” Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 7 - Mid Ground x2", distanceNm: 7.9, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
-        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
+    CoraCourse( title: "Course 18 - Middle Ground R4", distanceNm: 4.25, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_G27 ),
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
-    /*
-    COURSE 8 – 11.4 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G “27” Fl G 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    G “27” Fl G 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    G “27” Fl G 2.5s PORT
-    R “4” Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+
+    /**
+    "Clap Hands" - Tom Waits
+    A $50 bill inside of a paladin's hat.
+
+    Remember: Icons and Heroes - Xena,Hercules, DS9, and Paladin (during the day while hulu testing for Wanda).
+
+    Remember: the innocent summer series races out to R2 aboard a series of J boats:
+        Level Pelican (J24)
+        Illyria (J120)
+        Sceptre (J130)
+
+    Sometimes (not all the times) someone from the crew passes up cold beers on the final downwind leg
     */
-    CoraCourse( title: "Course 8 - Mid Ground x3", distanceNm: 11.4, category: "Harbor", marks:[
+
+    /*
+        COURSE 19 – 5.31 NM
+        START Starting mark and CYC dock
+        R "4" Fl R 4s PORT
+        R “2” Fl R 2.5s PORT
+        G “27” Fl G 2.5s PORT
+        R “4” Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 19 - Summer Triangle", distanceNm: 5.31, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
-        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
-        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
-        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     /*
-    COURSE 9 – 8.5 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    R "2" Fl R 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    R "2" Fl R 2.5s PORT
-    R “4” Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 20 – 4.07 NM
+        START Starting mark and CYC dock
+        G “37” FI G 4s PORT
+        RG "BP" Fl (2+1) R 6s PORT
+        FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 9 - Summer x2", distanceNm: 8.5, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+    CoraCourse( title: "Course 20 - Rav(enel)Down(wind)", distanceNm: 4.07, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
+    ] ),
     
     /*
-    COURSE 10 - 12.0 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    R "2" Fl R 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    R "2" Fl R 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    R "2" Fl R 2.5s PORT
-    R “4” Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 21 – 8.09 NM
+        START Starting mark and CYC dock
+        G “37” FI G 4s PORT
+        RG "BP" Fl (2+1) R 6s PORT
+        G “37” Fl G 4s PORT
+        RG "BP" Fl (2+1) R 6s PORT
+        FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 10 - Summer x3", distanceNm: 12.0, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+    CoraCourse( title: "Course 21 - RavDownBP x2", distanceNm: 8.09, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ]  ),
+    ] ),
     
-    
+        
     /*
-    COURSE 11 – 5.7 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 11 - WL x2", distanceNm: 5.7, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        COURSE 22 – 7.71 NM
+        START Starting mark and CYC dock
+        G “37” FI G 4s PORT
+        RG "BP" Fl (2+1) R 6s PORT
+        G “37” Fl G 4s PORT
+        R "4" Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
+     */
+     CoraCourse( title: "Course 22 - RavDown x2", distanceNm: 7.71, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.G37,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,     leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
+    ] ),
+            
     /*
-    COURSE 12 – 7.9 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        "ships were made for sinking, whiskey made for drinking"
+        Especially numbers one through nine - Morphine
     */
-    CoraCourse( title: "Course 12 - WL x3", distanceNm: 7.9, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
     /*
-    COURSE 13 – 5.2 NM
-    START Starting mark and CYC dock
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    FINISH Finishing mark and CYC dock
+        COURSE 23 –7.28 NM
+        START Starting mark and CYC dock
+        G “37” Fl G 4s PORT
+        R “4” FI R 4s PORT
+        G “37” Fl G 4s PORT
+        R “4” FI R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 13 - WL Down x2", distanceNm: 5.2, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 14 – 7.7 NM
-    START Starting mark and CYC dock
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    “J” PORT
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 14 - WL Down x3", distanceNm: 7.7, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 15 – 5.47 NM
-    START Starting mark and CYC dock
-    G “37” Fl G 4s PORT
-    R “4” FI R 4s PORT
-    G “37” Fl G 4s PORT
-    R “4” FI R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 15 - Ravenel R4 x2", distanceNm: 5.47, category: "Harbor", marks:[
+    CoraCourse( title: "Course 23 - RavDownR4 x2", distanceNm: 7.28, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
         CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_G37 ),
         CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 16 - 4.4 NM
-    (NOT FOR “A” CLASS)
-    START Starting mark and CYC dock
-    R “2” Fl R 2.5s PORT
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 16 - Not for A Class", distanceNm: 4.4, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 17 - 4.8 NM
-    (“A” CLASS COMPANION TO COURSE 16)
-    START Starting mark and CYC dock
-    R “4” Fl R 4s PORT
-    R “2” Fl R 2.5s PORT
-    R “4” Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 17 - A Class Alt to 16", distanceNm: 4.8, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_R2 ),
-        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R2_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 18 - 4 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G “37” Fl G 4s PORT
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 18 - Ravenel", distanceNm: 4.0, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 19 - 8 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G “37” Fl R 2.5s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    G “37” Fl G 4s PORT
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 19 - Ravenel x2", distanceNm: 8.0, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 20 – 4 NM
-    START Starting mark and CYC dock
-    G “37” FI G 4s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 20 - Ravenel Down", distanceNm: 4.0, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
-    /*
-    COURSE 21 – 8 NM
-    START Starting mark and CYC dock
-    G “37” FI G 4s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    G “37” Fl G 4s PORT
-    RG "BP" Fl (2+1) R 6s PORT
-    FINISH Finishing mark and CYC dock
-    */
-    CoraCourse( title: "Course 21 - Rav Down x2", distanceNm: 8.0, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-    
+    ] ),
         
-
+        
     /*
-    // ---------- BEGINNING New 2016 Inshore Courses --------------
-    */
-
-    /*
-        COURSE 22 – 6.3 NM
+        COURSE 24 – 2.26 NM
         START Starting mark and CYC dock
-        RG "BP" Fl (2+1) R 6s PORT
-        G “37” Fl G 4s PORT
-        RG "BP" Fl (2+1) R 6s PORT
         “J” PORT
-        FINISH Finishing mark and CYC dock
-        
-     */
-     CoraCourse( title: "Course 22* - New in 2016", distanceNm: 6.3, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-        CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_FINISH ),
-        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ] ),
-        
-        
-        /*
-        COURSE 23 – 7.7 NM
-        START Starting mark and CYC dock
-        G “37” FI G 4s PORT
         RG "BP" Fl (2+1) R 6s PORT
-        G “37” Fl G 4s PORT
+        FINISH Finishing mark and CYC dock
+    */
+    CoraCourse( title: "Course 24 - Reverse Triangle", distanceNm: 2.26, category: "Harbor", marks:[
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_J ),
+        CoraRounding( mark: CoraMark.J,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
+        CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
+    ] ),
+        
+        
+        /****
+         * Offshore Courses
+         */
+
+    /*
+        COURSE 25 – 25.39 NM
+        START Starting mark and CYC dock
+        RG "BP" Fl (2+1) R 6s PORT
+        R "14" Fl R 2.5s BELL PORT
+        RN "2" (RATTLESNAKE) PORT
+        R "14" Fl R 2.5s BELL STARBOARD
         R "4" Fl R 4s STARBOARD
-        FINISH Finishing mark and CYC dock 
-        */
-        CoraCourse( title: "Course 23* - New in 2016", distanceNm: 7.7, category: "Harbor", marks:[
-            CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
-            CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-            CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-            CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
-            CoraRounding( mark: CoraMark.R4,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_FINISH ),
-            CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-            ] ),
-        
-        
-        /*
-        COURSE 24 – 6.5 NM
-        START Starting mark and CYC dock
-        G “37” FI G 4s PORT
-        RG "BP" Fl (2+1) R 6s PORT
-        G “37” Fl G 4s PORT
-        FINISH Finishing mark and CYC dock 
-        */
-        CoraCourse( title: "Course 24* - New in 2016", distanceNm: 6.5, category: "Harbor", marks:[
-            CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
-            CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-            CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-            CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_FINISH ),
-            CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-            ] ),
-        
-        
-        /*
-        COURSE 25 – 4.7 NM
-        START Starting mark and CYC dock
-        G “37” FI G 4s PORT
-        RG "BP" Fl (2+1) R 6s PORT
-        “J” PORT
         FINISH Finishing mark and CYC dock
-        */
-        CoraCourse( title: "Course 25* - New in 2016", distanceNm: 4.7, category: "Harbor", marks:[
-            CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_G37 ),
-            CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-            CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-            CoraRounding( mark: CoraMark.J,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_FINISH ),
-            CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-            ] ),
-        
-        /*
-        COURSE 26 – 4.4 NM
-        START Starting mark and CYC dock
-        “J” PORT
-        RG "BP" Fl (2+1) R 6s PORT
-        “J” PORT
-        RG "BP" Fl (2+1) R 6s PORT
-        FINISH Finishing mark and CYC dock
-        */
-        CoraCourse( title: "Course 26* - New in 2016", distanceNm: 4.4, category: "Harbor", marks:[
-            CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_J ),
-            CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-            CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
-            CoraRounding( mark: CoraMark.J,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_BP ),
-            CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_FINISH ),
-            CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-            ] ),
-        
-        
-        
-
-
-    /*
-    // ---------- BEGINNING OF Offshore Courses --------------
-    
-    COURSE 27 - 23.4 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    R "14" Fl R 2.5s BELL PORT
-    RN "2" (Rattlesnake) PORT
-    R "14" Fl R 2.5s BELL STARBOARD
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 27* - Rattlesnake", distanceNm: 23.4, category: "Offshore", marks:[
+    CoraCourse( title: "Course 25 - Rattlesnake", distanceNm: 25.39, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_R14 ),
@@ -678,18 +654,18 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
         ] ),
-    
+        
     /*
-    COURSE 28 - 39.2 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G “13” Fl G 2.5s STARBOARD
-    RW “C” Mo (A) WHIS PORT
-    G “13” Fl G 2.5s PORT
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 26 - 39.24 NM
+        START Starting mark and CYC dock
+        RG "BP" Fl (2+1) R 6s PORT
+        G “13” Fl G 2.5s STARBOARD
+        RW “C” Mo (A) WHIS PORT
+        G “13” Fl G 2.5s PORT
+        R "4" Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 28* - Sea Buoy", distanceNm: 39.2, category: "Offshore", marks:[
+    CoraCourse( title: "Course 26 - CHS Sea Buoy", distanceNm: 39.24, category: "Offshore", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_G13 ),
@@ -701,15 +677,17 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
         ] ),
     
+
+
     /*
-    COURSE 29 - 33.8 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G “13” Fl G 2.5s STARBOARD
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 27 – 18.88 NM
+        START Starting mark and CYC dock
+        RG "BP" Fl (2+1) R 6s PORT
+        G “13” Fl G 2.5s STARBOARD
+        R "4" Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock 
     */
-    CoraCourse( title: "Course 29* - G13 Not 33.8nm", distanceNm: 19.2, category: "Offshore", marks:[
+    CoraCourse( title: "Course 27 - Round G13 to Stbd", distanceNm: 18.88, category: "Offshore", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_G13 ),
@@ -719,17 +697,19 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
         ] ),
     
+
     /*
-    COURSE 30 - 52.6 NM
-    START Starting mark and CYC dock
-    R "4" Fl R 4s PORT
-    R "14" Fl R 2.5s BELL PORT
-    RN "2" (Rattlesnake) STARBOARD
-    RW “C” Mo (A) WHIS STARBOARD
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 28 – 41.70 NM
+        START Starting mark and CYC dock
+        R "4" Fl R 4s PORT
+        R "14" Fl R 2.5s BELL PORT
+        RN "2" (RATTLESNAKE) STARBOARD
+        RW “C” Mo (A) WHIS STARBOARD
+        R "4" Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 30* - Longest", distanceNm: 52.6, category: "Offshore", marks:[
+
+    CoraCourse( title: "Course 28 - Ocean Triangle", distanceNm: 41.70, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_R14 ),
@@ -739,26 +719,30 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ]  ),
+        ] ),
     
+
+
     /*
-    COURSE 31 - 11.7 NM
-    START Starting mark and CYC dock
-    RG "BP" Fl (2+1) R 6s PORT
-    G "15" Fl G 2.5s BELL PORT
-    R "4" Fl R 4s STARBOARD
-    FINISH Finishing mark and CYC dock
+        COURSE 29 – 15.60 NM
+        START Starting mark and CYC dock
+        RG "BP" Fl (2+1) R 6s PORT
+        G "15" Fl G 2.5s BELL PORT
+        R "4" Fl R 4s STARBOARD
+        FINISH Finishing mark and CYC dock 
     */
-    CoraCourse( title: "Course 31* - G15 Not 11.7nm", distanceNm: 16.1, category: "Offshore", marks:[
+    CoraCourse( title: "Course 29 - Round G15 to Port", distanceNm: 15.60, category: "Offshore", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_G15 ),
-        CoraRounding( mark: CoraMark.G15,   leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.G15_TO_JETI ),
+        CoraRounding( mark: CoraMark.G15,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G15_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
-        ]  )
-]
+    ] )
+
+
+    ]
 }
 
 
