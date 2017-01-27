@@ -106,7 +106,7 @@ class CourseTableViewCell : UITableViewCell {
         
         titleLabel.text = course.title
                
-        distanceLabel.text = String(format:"%0.1f nm", course.distanceNm )
+        distanceLabel.text = String(format:"%0.2f nm", course.distanceNm )
         
         if(course.marks.count > 0 ) {
             row1Left.text = course.marks[0].mark.name
@@ -243,7 +243,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-         print("You selected cell #\(indexPath.row)!")
+         // print("You selected cell #\(indexPath.row)!")
     }
 }
 

@@ -134,6 +134,7 @@ struct CoraLeg {
     
     static let R2_TO_R4     = CoraLeg ( begin: CoraMark.R2   , end: CoraMark.R4    , headingToNextM: 287, distanceToNextNm: 1.74 )
     static let R2_TO_BP     = CoraLeg ( begin: CoraMark.R2   , end: CoraMark.BP    , headingToNextM: 279, distanceToNextNm: 1.82 )
+    static let R2_TO_G27    = CoraLeg ( begin: CoraMark.R2   , end: CoraMark.G27   , headingToNextM: 344, distanceToNextNm: 0.79 )
     static let R2_TO_FINISH = CoraLeg ( begin: CoraMark.R2   , end: CoraMark.FINISH, headingToNextM: 304, distanceToNextNm: 2.3 )
     
     static let R4_TO_R2     = CoraLeg ( begin: CoraMark.R4   , end: CoraMark.R2    , headingToNextM: 107, distanceToNextNm: 1.74 )
@@ -269,7 +270,7 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G27 ),
         CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
     ] ),
     
@@ -414,10 +415,10 @@ struct CoraCourses2017 {
     CoraCourse( title: "Course 13 - Ravenel 2x", distanceNm: 9.31, category: "Harbor", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
-        CoraRounding( mark: CoraMark.R4,     leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_FINISH ),
+        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
     ] ),
     
@@ -455,7 +456,7 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
         CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
+        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_J ),
         CoraRounding( mark: CoraMark.J,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.J_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
@@ -532,11 +533,11 @@ struct CoraCourses2017 {
         FINISH Finishing mark and CYC dock
     */
     CoraCourse( title: "Course 19 - Summer Tri", distanceNm: 5.31, category: "Harbor", marks:[
-        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_BP ),
-        CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_G37 ),
-        CoraRounding( mark: CoraMark.G37,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G37_TO_FINISH ),
+        CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R4_TO_R2 ),
+        CoraRounding( mark: CoraMark.R2,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.R2_TO_G27 ),
+        CoraRounding( mark: CoraMark.G27,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G27_TO_R4 ),
+        CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
     ] ),
     
@@ -643,7 +644,7 @@ struct CoraCourses2017 {
         R "4" Fl R 4s STARBOARD
         FINISH Finishing mark and CYC dock
     */
-    CoraCourse( title: "Course 25 - Rattlesnake", distanceNm: 25.39, category: "Harbor", marks:[
+    CoraCourse( title: "Course 25 - Rattlesnake", distanceNm: 25.39, category: "Offshore", marks:[
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_R14 ),
@@ -669,9 +670,9 @@ struct CoraCourses2017 {
         CoraRounding( mark: CoraMark.START, leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.START_TO_BP ),
         CoraRounding( mark: CoraMark.BP,    leaveTo: CoraRounding.port,  nextLeg: CoraLeg.BP_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_G13 ),
-        CoraRounding( mark: CoraMark.G13,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G13_TO_RWC ),
+        CoraRounding( mark: CoraMark.G13,   leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.G13_TO_RWC ),
         CoraRounding( mark: CoraMark.RWC,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.RWC_TO_G13 ),
-        CoraRounding( mark: CoraMark.G13,   leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.G13_TO_JETI ),
+        CoraRounding( mark: CoraMark.G13,   leaveTo: CoraRounding.port,  nextLeg: CoraLeg.G13_TO_JETI ),
         CoraRounding( mark: CoraMark.JETI,  leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.JETI_TO_R4 ),
         CoraRounding( mark: CoraMark.R4,    leaveTo: CoraRounding.STBD,  nextLeg: CoraLeg.R4_TO_FINISH ),
         CoraRounding( mark: CoraMark.FINISH,leaveTo: CoraRounding.NONE,  nextLeg: CoraLeg.NONE )
